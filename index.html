@@ -1,0 +1,116 @@
+
+
+
+<!-- ESTE É O HTML QUE UTILIZAREMOS, OBSERVEM ESSES COMENTÁRIOS
+     PARA QUE O PROCEDIMENTO CORRETO SEJA FEITO -->
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+
+<!-- AQUI ESTÃO OS DADOS DO NOSSO SITE, NESTE CÓDIGO, NÃO DEVEM SER ALTERADOS -->
+
+<head>
+
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Icolor</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="manifest.json">
+     <!-- IOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Icolor">
+  <link rel="apple-touch-icon" href="iconeadada.png">
+
+    <!-- Windows Phone -->
+  <meta name="msapplication-TileImage" content="iconeadada.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+
+  <!-- CSS  -->
+
+ <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+
+
+
+<!-- AQUI ESTÃO OS ELEMENTOS DO NOSSO SITE, TUDO QUE APARECE NO SITE FICA AQUI -->
+
+<body>
+
+  <div class="section no-pad-bot" id="index-banner">
+
+    <div class="container">
+
+      <br><br>
+
+      <h1 class="header moves center yellow-lighten-3">Icolor</h1>
+
+      <div class="row center">
+
+        <h5 class="header col s12 light">Aplicativo que muda a cor do Background ao clicar, Experimente!</h5>
+
+      </div>
+
+      <div class="row center">
+
+        <a id="download-button" class="btn-large waves-effect waves-light green">Clique Aqui</a>
+      </div>
+
+      <br>
+
+    <div class = "footer-copyright">
+
+          <div id="footer" class="container center">
+
+            &copy 2016 CloudsDevelopers Corp.  <br>
+
+          </div>
+
+    </div>
+
+  </div>
+
+
+
+
+</body>
+
+
+<!-- AQUI ESTÃO OS SCRIPTS DO NOSSO SITE, NÃO DEVEM SER ALTERADOS -->
+
+
+<script type="text/javascript" language = "javascript" src= "js/jquery.js"></script>
+<script type="text/javascript" language = "javascript" src= "js/jqueryColor.js"></script>
+<script type="text/javascript" language = "javascript" src= "js/materialize.js"></script>
+<script type="text/javascript" language = "javascript" src= "js/icolor.js"></script>
+
+
+
+<!-- A PRÁTICA COMEÇA AQUI -->
+
+<!-- AQUI VAMOS VERIFICAR SE O NAVEGADOR É COMPATIVEL COM O SERVICE-WORKERS -->
+
+<script type="text/javascript">
+
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('./service-workers.js')
+             .then(function() { console.log('ServiceWorkers foi registrado!'); });
+  }
+</script>
+
+
+
+
+
+<!-- CHAME AQUI SEU SCRIPT -->
+
+
+
+
+
+
+</html>
